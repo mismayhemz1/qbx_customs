@@ -13,7 +13,7 @@ local menu = {
     canClose = true,
     disableInput = false,
     title = locale("menus.main.title"),
-    position = 'top-left',
+    position = 'top-right',
     options = {},
 }
 
