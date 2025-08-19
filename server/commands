@@ -1,0 +1,16 @@
+RegisterCommand('t', function(source, args)
+    local msg = table.concat(args, ' ')
+    if msg == '' then return end
+    TriggerClientEvent('chat:addMessage', -1, {
+        color = { 0, 255, 255 },
+        args = { 'Twitter', msg }
+    })
+end)
+
+RegisterCommand('ooc', function(source, args)
+    local msg = table.concat(args, ' ')
+    TriggerClientEvent('chat:addMessage', -1, {
+        color = { 255, 255, 255 },
+        args = { 'OOC | '..GetPlayerName(source), msg }
+    })
+end)
